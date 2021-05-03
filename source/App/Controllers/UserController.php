@@ -38,24 +38,32 @@ class UserController
      */
     public function store(array $data)
     {
-        $model = new User();
-        $model->first_name = $data['first_name'];
-        $model->last_name = $data['last_name'];
-        $model->genre = $data['genre'];
-        $model->created_at = "now()";
-        $model->updated_at = null;
-        $userId = $model->save();
-
-        if ($userId) {
+        if (empty($data)) {
             $callback = [
-                "sucess" => 1,
-                "msg" => "User created."
+                "success" => 0,
+                "msg" => "Please fill all the required fields."
             ];
         } else {
-            $callback = [
-                "sucess" => 0,
-                "msg" => "User not inserted."
-            ];
+            $model = new User();
+            $model->first_name = $data['first_name'];
+            $model->last_name = $data['last_name'];
+            $model->genre = $data['genre'];
+            $model->created_at = "now()";
+            $model->updated_at = null;
+            $userId = $model->save();
+
+            if ($userId) {
+                $callback = [
+                    "success" => 1,
+                    "msg" => "User created."
+                ];
+            } else {
+                $callback = [
+                    "success" => 0,
+                    "msg" => "User not inserted.",
+                    "error" => $model->fail()
+                ];
+            }
         }
         echo json_encode($callback);
     }
@@ -80,17 +88,32 @@ class UserController
      */
     public function update(array $data)
     {
-        $dataId = filter_var_array($data, FILTER_SANITIZE_NUMBER_INT);
-        $model = (new User())->findById($dataId['id']);
-        $model->first_name = $data['first_name'];
-        $model->last_name = $data['last_name'];
-        $model->genre = $data['genre'];
-        $model->updated_at = "now()";
-        $model->save();
-        $callback = [
-            "success" => 1,
-            "msg" => "User data updated."
-        ];
+        if (empty($data)) {
+            $callback = [
+                "success" => 0,
+                "msg" => "Please fill all the required fields."
+            ];
+        } else {
+            $dataId = filter_var_array($data, FILTER_SANITIZE_NUMBER_INT);
+            $model = (new User())->findById($dataId['id']);
+            $model->first_name = $data['first_name'];
+            $model->last_name = $data['last_name'];
+            $model->genre = $data['genre'];
+            $model->updated_at = "now()";
+            $userId = $model->save();
+
+            if ($userId) {
+                $callback = [
+                    "success" => 1,
+                    "msg" => "User data updated."
+                ];
+            } else {
+                $callback = [
+                    "success" => 0,
+                    "msg" => "User not updated."
+                ];
+            }
+        }
         echo json_encode($callback);
     }
 
