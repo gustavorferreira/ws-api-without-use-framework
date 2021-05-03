@@ -7,11 +7,13 @@ $router = new Router(ROOT);
 $router->namespace("Source\App\Controllers");
 
 $router->group(null);
-$router->get("/", "Login:home");
+$router->get("/", "UserController:index");
 
-$router->group("usuario");
-$router->get("/", "Login:listUsers");
-$router->get("/{id}", "Login:userProfile");
-$router->put("/atualizar/{id}", "Login:update");
+$router->group("user");
+$router->get("/", "UserController:index", "user.index");
+$router->get("/{id}", "UserController:show", "user.show");
+$router->post("/", "UserController:store", "user.store");
+$router->put("/{id}", "UserController:update", "user.update");
+$router->delete("/{id}", "UserController:destroy", "user.destroy");
 
 $router->dispatch();
