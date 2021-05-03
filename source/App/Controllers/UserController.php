@@ -5,21 +5,14 @@ namespace Source\App\Controllers;
 
 use Source\Models\User;
 
-/**
- * Class UserController
- * @package Source\App\Controllers
- */
 class UserController
 {
-    /**
-     *
-     */
+
     public function index()
     {
         $model = new User();
         $list = $model->find()->order("id desc")->fetch(true);
         $count = $model->count();
-
         if ($count > 0) {
             $user = $model->data();
             /** @var  $user User */
@@ -35,17 +28,11 @@ class UserController
         echo json_encode($callback);
     }
 
-    /**
-     *
-     */
     public function create()
     {
 
     }
 
-    /**
-     * @param array $data
-     */
     public function store(array $data)
     {
         if (empty($data)) {
@@ -76,9 +63,6 @@ class UserController
         echo json_encode($callback);
     }
 
-    /**
-     * @param array $data
-     */
     public function show(array $data)
     {
         $dataId = filter_var_array($data, FILTER_SANITIZE_NUMBER_INT);
@@ -99,9 +83,6 @@ class UserController
         echo json_encode($callback);
     }
 
-    /**
-     * @param array $data
-     */
     public function update(array $data)
     {
         if (empty($data)) {
@@ -132,9 +113,6 @@ class UserController
         echo json_encode($callback);
     }
 
-    /**
-     * @param array $data
-     */
     public function destroy(array $data)
     {
         $dataId = filter_var_array($data, FILTER_SANITIZE_NUMBER_INT);
