@@ -17,10 +17,20 @@ class UserController
     public function index()
     {
         $model = new User();
-        $list = $model->find()->fetch(true);
-        /** @var  $user User */
-        foreach ($list as $user) {
-            $callback[] = $user->data();
+        $list = $model->find()->order("id desc")->fetch(true);
+        $count = $model->count();
+
+        if ($count > 0) {
+            $user = $model->data();
+            /** @var  $user User */
+            foreach ($list as $user) {
+                $callback[] = $user->data();
+            }
+        } else {
+            $callback = [
+                "success" => 0,
+                "msg" => "Not exist users.",
+            ];
         }
         echo json_encode($callback);
     }
@@ -51,7 +61,6 @@ class UserController
             $model->created_at = "now()";
             $model->updated_at = null;
             $userId = $model->save();
-
             if ($userId) {
                 $callback = [
                     "success" => 1,
@@ -60,8 +69,7 @@ class UserController
             } else {
                 $callback = [
                     "success" => 0,
-                    "msg" => "User not inserted.",
-                    "error" => $model->fail()
+                    "msg" => "User not inserted."
                 ];
             }
         }
@@ -75,11 +83,19 @@ class UserController
     {
         $dataId = filter_var_array($data, FILTER_SANITIZE_NUMBER_INT);
         $model = (new User())->findById($dataId['id']);
-        $user = $model->data();
-        $callback = [
-            "user" => $user,
-            "msg" => 200
-        ];
+        if ($model) {
+            $user = $model->data();
+            $callback = [
+                "user" => $user,
+                "success" => 1,
+                "msg" => 200
+            ];
+        } else {
+            $callback = [
+                "success" => 0,
+                "msg" => "User not found.",
+            ];
+        }
         echo json_encode($callback);
     }
 
@@ -101,7 +117,6 @@ class UserController
             $model->genre = $data['genre'];
             $model->updated_at = "now()";
             $userId = $model->save();
-
             if ($userId) {
                 $callback = [
                     "success" => 1,
