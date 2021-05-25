@@ -17,7 +17,7 @@
       "Source\\": "source/"
     },
     "files": [
-      "source/Config.php"
+      "source/App/Config/core_cfg.php"
     ]
   },
   "require": {
