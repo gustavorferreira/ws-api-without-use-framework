@@ -51,7 +51,8 @@ class UserController
             if ($userId) {
                 $callback = [
                     "success" => 1,
-                    "msg" => "User created."
+                    "msg" => "User created.",
+                    "user" => 28
                 ];
             } else {
                 $callback = [
