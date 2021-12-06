@@ -24,7 +24,8 @@ Pré requisitos para executar o projeto:
 
 ## Executar projeto via terminal
 
-- http://localhost/web-service-api-without-use-framework
+- http://localhost/
+  ws-api-without-use-framework
 
 ## Verificar as rotas da API
 
