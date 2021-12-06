@@ -60,7 +60,7 @@ Veja as rotas para consumir a API no aquivo `index.php`
 
 ## 📄 Licença
 
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+Esse projeto está sob a licença MIT.
 
 ---
 
