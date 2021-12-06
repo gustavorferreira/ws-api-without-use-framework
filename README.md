@@ -34,6 +34,10 @@ first_name varchar NULL,
 last_name varchar NULL
 );
 
+## Configurara banco de dados
+
+/source/App/Config/core_cfg.php
+
 ## Executar projeto via terminal
 
 - http://localhost/ws-api-without-use-framework
