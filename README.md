@@ -1,5 +1,3 @@
-# grf-bsb-ws-api-php-composer-datalayer-crud-router
-
 ## API sem uso de framwork
 
 Pré requisitos para executar o projeto:
