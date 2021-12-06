@@ -23,6 +23,7 @@
   "require": {
     "coffeecode/datalayer": "1.1.*",
     "coffeecode/router": "1.0.*",
-    "ext-json": "*"
+    "ext-json": "*",
+    "ext-pdo": "*"
   }
 }
