@@ -24,7 +24,7 @@ Pré requisitos para executar o projeto:
 
 ## Executar projeto via terminal
 
-- http://localhost/grf-bsb-ws-api-php-composer-datalayer-crud-router
+- http://localhost/web-service-api-without-use-framework
 
 ## Verificar as rotas da API
 
