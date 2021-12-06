@@ -1,45 +1,68 @@
-## API sem uso de framwork
+<h1 align="center">API sem uso de Framework</h1>
+
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-como-executar">Como executar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-saiba-mais">Saiba mais</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-licença">Licença</a>
+</p>
+
+<p align="center">
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=8257E5&labelColor=000000">
+</p>
+
+## ✨ Tecnologias
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- [Datalayer](https://packagist.org/packages/coffeecode/datalayer)
+- [Router](https://packagist.org/packages/coffeecode/router)
+
+## 💻 Projeto
+
+O Web Service é uma aplicação que simula uma API de usuários, com uso de de componentes do mercado disponíveis no Packagist.
+
+## 🚀 Como executar
 
 Pré requisitos para executar o projeto:
 
 - Servidor Web
 - PHP >= 7.2.0, com as seguintes extensões:
-    - BCMath PHP
-    - Ctype PHP
-    - JSON PHP
-    - Mbstring PHP
-    - OpenSSL PHP
-    - PDO PHP
-    - PGSQL PHP
-    - Tokenizer PHP
-    - XML PHP
+  - BCMath PHP
+  - Ctype PHP
+  - JSON PHP
+  - Mbstring PHP
+  - OpenSSL PHP
+  - PDO PHP
+  - PGSQL PHP
+  - Tokenizer PHP
+  - XML PHP
 - Composer
 - Postgres >= 12
 
-## Instalar projeto via composer
 
-- composer install
+- Instale as dependências com `composer install`
+- Crie o banco de dados:
 
-## Criar tabela
-
--- public.users definition
--- Drop table
--- DROP TABLE public.users;
-
+`
 CREATE TABLE public.users (
 id serial4 NOT NULL,
 first_name varchar NULL,
 last_name varchar NULL
 );
+`
 
-## Configurara banco de dados
+- Configurar o banco de dados:
+  - /source/App/Config/core_cfg.php 
 
-/source/App/Config/core_cfg.php
+Agora você pode acessar [`http://localhost/ws-api-without-use-framework`](http://localhost/ws-api-without-use-framework) do seu navegador.
+Veja as rotas para consumir a API no aquivo `index.php`
 
-## Executar projeto via terminal
+## 📄 Licença
 
-- http://localhost/ws-api-without-use-framework
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
 
-## Verificar as rotas da API
+---
 
-- index.php
+Feito com ♥ by GRF 👋🏻 
