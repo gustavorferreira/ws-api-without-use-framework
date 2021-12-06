@@ -22,6 +22,18 @@ Pré requisitos para executar o projeto:
 
 - composer install
 
+## Criar tabela
+
+-- public.users definition
+-- Drop table
+-- DROP TABLE public.users;
+
+CREATE TABLE public.users (
+id serial4 NOT NULL,
+first_name varchar NULL,
+last_name varchar NULL
+);
+
 ## Executar projeto via terminal
 
 - http://localhost/ws-api-without-use-framework
