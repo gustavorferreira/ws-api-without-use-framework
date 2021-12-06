@@ -4,6 +4,7 @@
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-como-executar">Como executar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-saiba-mais">Saiba mais</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-licença">Licença</a>
 </p>
 
@@ -54,10 +55,14 @@ last_name varchar NULL
 Agora você pode acessar [`http://localhost/ws-api-without-use-framework`](http://localhost/ws-api-without-use-framework) do seu navegador.
 Veja as rotas para consumir a API no aquivo `index.php`
 
+## ⚡️ Saiba mais
+
+- Fonte aprendizagem: [PHP Tips (Playlist Youtube)](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj179ehqt_wAhVeCrkGHR_8DQkQFjAAegQIBBAD&url=https%3A%2F%2Fwww.youtube.com%2Fplaylist%3Flist%3DPLi_gvjv-JgXqsmCAOrueT1-4JrnMW8_Gg&usg=AOvVaw22lElN4vQExRp0IZwNuUUN)
+
 ## 📄 Licença
 
 Esse projeto está sob a licença MIT.
 
 ---
 
-Feito com ♥ by GRF 👋🏻 
+Feito com ♥ by GRF 👋🏻  
