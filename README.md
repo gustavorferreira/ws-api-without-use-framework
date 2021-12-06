@@ -29,14 +29,10 @@ Pré requisitos para executar o projeto:
 - Servidor Web
 - PHP >= 7.2.0, com as seguintes extensões:
   - BCMath PHP
-  - Ctype PHP
   - JSON PHP
   - Mbstring PHP
-  - OpenSSL PHP
   - PDO PHP
   - PGSQL PHP
-  - Tokenizer PHP
-  - XML PHP
 - Composer
 - Postgres >= 12
 
