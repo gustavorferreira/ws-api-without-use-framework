@@ -54,6 +54,8 @@ last_name varchar NULL
 
 - Agora você pode acessar [`http://localhost/ws-api-without-use-framework`](http://localhost/ws-api-without-use-framework) do seu navegador.
 - Veja as rotas para consumir a API no aquivo `index.php`
+  - http://localhost/ws-api-without-use-framework/
+  - http://localhost/ws-api-without-use-framework/user/id
 
 ## ⚡️ Saiba mais
 
