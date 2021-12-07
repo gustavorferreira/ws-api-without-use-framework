@@ -1,6 +1,6 @@
 <?php
 
-const ROOT = "http://localhost/ws-api-without-use-framework/";
+const ROOT = "http://localhost/ws-api-without-use-framework";
 
 const DATA_LAYER_CONFIG = [
     "driver" => "pgsql",
