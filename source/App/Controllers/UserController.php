@@ -77,7 +77,7 @@ class UserController
                 "msg" => "User not found.",
             ];
         }
-        echo json_encode($data);
+        echo json_encode($callback);
     }
 
     public function update(array $data)
