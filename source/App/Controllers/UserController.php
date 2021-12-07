@@ -44,15 +44,11 @@ class UserController
             $model = new User();
             $model->first_name = $data['first_name'];
             $model->last_name = $data['last_name'];
-            $model->genre = $data['genre'];
-            $model->created_at = "now()";
-            $model->updated_at = null;
             $userId = $model->save();
             if ($userId) {
                 $callback = [
                     "success" => 1,
-                    "msg" => "User created.",
-                    "user" => 28
+                    "msg" => "User created."
                 ];
             } else {
                 $callback = [
@@ -81,7 +77,7 @@ class UserController
                 "msg" => "User not found.",
             ];
         }
-        echo json_encode($callback);
+        echo json_encode($data);
     }
 
     public function update(array $data)
@@ -96,8 +92,6 @@ class UserController
             $model = (new User())->findById($dataId['id']);
             $model->first_name = $data['first_name'];
             $model->last_name = $data['last_name'];
-            $model->genre = $data['genre'];
-            $model->updated_at = "now()";
             $userId = $model->save();
             if ($userId) {
                 $callback = [

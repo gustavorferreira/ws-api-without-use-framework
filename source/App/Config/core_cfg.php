@@ -1,6 +1,6 @@
 <?php
 
-const ROOT = "http://localhost/grf-bsb-ws-api-php-composer-datalayer-crud-router";
+const ROOT = "http://localhost/ws-api-without-use-framework/";
 
 const DATA_LAYER_CONFIG = [
     "driver" => "pgsql",
