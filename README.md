@@ -52,8 +52,8 @@ last_name varchar NULL
 - Configurar o banco de dados:
   - /source/App/Config/core_cfg.php 
 
-Agora você pode acessar [`http://localhost/ws-api-without-use-framework`](http://localhost/ws-api-without-use-framework) do seu navegador.
-Veja as rotas para consumir a API no aquivo `index.php`
+- Agora você pode acessar [`http://localhost/ws-api-without-use-framework`](http://localhost/ws-api-without-use-framework) do seu navegador.
+- Veja as rotas para consumir a API no aquivo `index.php`
 
 ## ⚡️ Saiba mais
 
